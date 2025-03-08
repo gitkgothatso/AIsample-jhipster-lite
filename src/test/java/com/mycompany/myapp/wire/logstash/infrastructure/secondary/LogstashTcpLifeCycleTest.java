@@ -1,12 +1,13 @@
 package com.mycompany.myapp.wire.logstash.infrastructure.secondary;
 
+import static com.mycompany.myapp.wire.logstash.infrastructure.secondary.LogstashTcpLifeCycle.ASYNC_LOGSTASH_APPENDER_NAME;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static com.mycompany.myapp.wire.logstash.infrastructure.secondary.LogstashTcpLifeCycle.ASYNC_LOGSTASH_APPENDER_NAME;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.pattern.ThrowableHandlingConverter;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mycompany.myapp.UnitTest;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.time.Duration;
@@ -21,7 +22,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.json.JsonTest;
 import org.springframework.boot.test.json.JacksonTester;
 import org.springframework.boot.test.json.ObjectContent;
-import com.mycompany.myapp.UnitTest;
 
 @UnitTest
 @JsonTest

@@ -1,9 +1,9 @@
 package com.mycompany.myapp.sample.domain.beer;
 
-import java.math.BigDecimal;
 import com.mycompany.myapp.sample.domain.Amount;
 import com.mycompany.myapp.sample.domain.BeerId;
 import com.mycompany.myapp.shared.error.domain.Assert;
+import java.math.BigDecimal;
 
 public final class Beer {
 

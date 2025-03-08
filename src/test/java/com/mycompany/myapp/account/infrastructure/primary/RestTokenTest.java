@@ -1,11 +1,11 @@
 package com.mycompany.myapp.account.infrastructure.primary;
 
-import static org.assertj.core.api.Assertions.*;
 import static com.mycompany.myapp.account.domain.TokensFixture.*;
+import static org.assertj.core.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
 import com.mycompany.myapp.JsonHelper;
 import com.mycompany.myapp.UnitTest;
+import org.junit.jupiter.api.Test;
 
 @UnitTest
 class RestTokenTest {

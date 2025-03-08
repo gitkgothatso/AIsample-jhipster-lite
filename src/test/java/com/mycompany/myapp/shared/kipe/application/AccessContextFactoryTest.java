@@ -3,9 +3,9 @@ package com.mycompany.myapp.shared.kipe.application;
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+import com.mycompany.myapp.UnitTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.security.core.Authentication;
-import com.mycompany.myapp.UnitTest;
 
 @UnitTest
 class AccessContextFactoryTest {

@@ -1,8 +1,8 @@
 package com.mycompany.myapp.sample.domain;
 
+import com.mycompany.myapp.shared.error.domain.Assert;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 public record Amount(BigDecimal amount) {
   public static final Amount ZERO = new Amount(BigDecimal.ZERO);

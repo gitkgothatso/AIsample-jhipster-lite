@@ -1,11 +1,11 @@
 package com.mycompany.myapp.sample.infrastructure.primary.beer;
 
+import com.mycompany.myapp.sample.domain.beer.Beer;
+import com.mycompany.myapp.shared.error.domain.Assert;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema.RequiredMode;
 import java.math.BigDecimal;
 import java.util.UUID;
-import com.mycompany.myapp.sample.domain.beer.Beer;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 @Schema(name = "beer", description = "A beer")
 final class RestBeer {

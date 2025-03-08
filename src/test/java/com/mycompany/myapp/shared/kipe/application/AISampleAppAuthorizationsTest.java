@@ -1,10 +1,14 @@
 package com.mycompany.myapp.shared.kipe.application;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.mockito.Mockito.*;
 import static com.mycompany.myapp.shared.kipe.application.TestAuthentications.*;
 import static com.mycompany.myapp.shared.kipe.domain.RolesAccessesFixture.*;
+import static org.assertj.core.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
+import com.mycompany.myapp.UnitTest;
+import com.mycompany.myapp.shared.authentication.application.UnknownAuthenticationException;
+import com.mycompany.myapp.shared.authentication.domain.Username;
+import com.mycompany.myapp.shared.error.domain.MissingMandatoryValueException;
 import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.Nested;
@@ -14,17 +18,11 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
-import com.mycompany.myapp.UnitTest;
-import com.mycompany.myapp.shared.authentication.application.UnknownAuthenticationException;
-import com.mycompany.myapp.shared.authentication.domain.Username;
-import com.mycompany.myapp.shared.error.domain.MissingMandatoryValueException;
 
 @UnitTest
 class AISampleAppAuthorizationsTest {
 
-  private static final AISampleAppAuthorizations authorizations = new AISampleAppAuthorizations(
-    List.of(rolesAccesses())
-  );
+  private static final AISampleAppAuthorizations authorizations = new AISampleAppAuthorizations(List.of(rolesAccesses()));
 
   @Nested
   class AllAuthorized {

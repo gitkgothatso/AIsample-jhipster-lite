@@ -1,5 +1,6 @@
 package com.mycompany.myapp.wire.springdoc.infrastructure.primary;
 
+import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
@@ -7,7 +8,6 @@ import org.springdoc.core.customizers.GlobalOpenApiCustomizer;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 
 @Configuration
 @AutoConfigureBefore(SpringdocConfiguration.class)

@@ -1,5 +1,7 @@
 package com.mycompany.myapp.shared.kipe.application;
 
+import com.mycompany.myapp.shared.error.domain.Assert;
+import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Arrays;
@@ -13,8 +15,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
-import com.mycompany.myapp.shared.error.domain.Assert;
-import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 
 @Service
 class AccessEvaluator {

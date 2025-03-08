@@ -1,12 +1,5 @@
 package com.mycompany.myapp.shared.kipe.application;
 
-import java.util.Collection;
-import java.util.Set;
-import java.util.stream.Collectors;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.stereotype.Component;
 import com.mycompany.myapp.shared.authentication.application.AuthenticatedUser;
 import com.mycompany.myapp.shared.authentication.domain.Role;
 import com.mycompany.myapp.shared.authentication.domain.Roles;
@@ -14,6 +7,13 @@ import com.mycompany.myapp.shared.authentication.domain.Username;
 import com.mycompany.myapp.shared.kipe.domain.Action;
 import com.mycompany.myapp.shared.kipe.domain.Resource;
 import com.mycompany.myapp.shared.kipe.domain.RolesAccesses;
+import java.util.Collection;
+import java.util.Set;
+import java.util.stream.Collectors;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.stereotype.Component;
 
 @Component
 public class AISampleAppAuthorizations {

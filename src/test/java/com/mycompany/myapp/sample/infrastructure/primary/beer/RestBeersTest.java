@@ -2,12 +2,12 @@ package com.mycompany.myapp.sample.infrastructure.primary.beer;
 
 import static org.assertj.core.api.Assertions.*;
 
-import java.util.List;
-import org.junit.jupiter.api.Test;
 import com.mycompany.myapp.JsonHelper;
 import com.mycompany.myapp.UnitTest;
 import com.mycompany.myapp.sample.domain.beer.Beers;
 import com.mycompany.myapp.sample.domain.beer.BeersFixture;
+import java.util.List;
+import org.junit.jupiter.api.Test;
 
 @UnitTest
 class RestBeersTest {

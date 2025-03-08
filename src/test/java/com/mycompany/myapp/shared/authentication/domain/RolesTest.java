@@ -2,9 +2,9 @@ package com.mycompany.myapp.shared.authentication.domain;
 
 import static org.assertj.core.api.Assertions.*;
 
+import com.mycompany.myapp.UnitTest;
 import java.util.Set;
 import org.junit.jupiter.api.Test;
-import com.mycompany.myapp.UnitTest;
 
 @UnitTest
 class RolesTest {

@@ -1,14 +1,14 @@
 package com.mycompany.myapp.shared.kipe.domain;
 
+import com.mycompany.myapp.shared.authentication.domain.Role;
+import com.mycompany.myapp.shared.authentication.domain.Roles;
+import com.mycompany.myapp.shared.error.domain.Assert;
+import com.mycompany.myapp.shared.kipe.domain.Accesses.RoleAccessesBuilder;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import com.mycompany.myapp.shared.authentication.domain.Role;
-import com.mycompany.myapp.shared.authentication.domain.Roles;
-import com.mycompany.myapp.shared.error.domain.Assert;
-import com.mycompany.myapp.shared.kipe.domain.Accesses.RoleAccessesBuilder;
 
 public final class RolesAccesses {
 

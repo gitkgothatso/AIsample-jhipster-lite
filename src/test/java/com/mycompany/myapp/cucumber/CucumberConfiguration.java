@@ -1,5 +1,9 @@
 package com.mycompany.myapp.cucumber;
 
+import com.mycompany.myapp.AISampleAppApp;
+import com.mycompany.myapp.cucumber.CucumberConfiguration.CucumberRestTemplateConfiguration;
+import com.mycompany.myapp.cucumber.rest.CucumberRestTemplate;
+import com.mycompany.myapp.cucumber.rest.CucumberRestTestContext;
 import io.cucumber.java.Before;
 import io.cucumber.spring.CucumberContextConfiguration;
 import java.nio.charset.StandardCharsets;
@@ -17,17 +21,10 @@ import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestTemplate;
-import com.mycompany.myapp.AISampleAppApp;
-import com.mycompany.myapp.cucumber.CucumberConfiguration.CucumberRestTemplateConfiguration;
-import com.mycompany.myapp.cucumber.rest.CucumberRestTemplate;
-import com.mycompany.myapp.cucumber.rest.CucumberRestTestContext;
 
 @ActiveProfiles("test")
 @CucumberContextConfiguration
-@SpringBootTest(
-  classes = { AISampleAppApp.class, CucumberRestTemplateConfiguration.class },
-  webEnvironment = WebEnvironment.RANDOM_PORT
-)
+@SpringBootTest(classes = { AISampleAppApp.class, CucumberRestTemplateConfiguration.class }, webEnvironment = WebEnvironment.RANDOM_PORT)
 public class CucumberConfiguration {
 
   private final TestRestTemplate rest;

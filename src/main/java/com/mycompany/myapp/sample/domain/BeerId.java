@@ -1,7 +1,7 @@
 package com.mycompany.myapp.sample.domain;
 
-import java.util.UUID;
 import com.mycompany.myapp.shared.error.domain.Assert;
+import java.util.UUID;
 
 public record BeerId(UUID id) {
   public BeerId {

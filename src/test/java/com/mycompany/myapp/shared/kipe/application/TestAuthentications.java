@@ -1,8 +1,8 @@
 package com.mycompany.myapp.shared.kipe.application;
 
+import com.mycompany.myapp.shared.authentication.domain.Role;
 import org.springframework.security.authentication.TestingAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import com.mycompany.myapp.shared.authentication.domain.Role;
 
 public final class TestAuthentications {
 

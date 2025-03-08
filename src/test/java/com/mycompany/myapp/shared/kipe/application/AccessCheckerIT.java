@@ -2,6 +2,7 @@ package com.mycompany.myapp.shared.kipe.application;
 
 import static org.assertj.core.api.Assertions.*;
 
+import com.mycompany.myapp.IntegrationTest;
 import java.lang.annotation.Annotation;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -9,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import org.reflections.Reflections;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import com.mycompany.myapp.IntegrationTest;
 
 @IntegrationTest
 class AccessCheckerIT {

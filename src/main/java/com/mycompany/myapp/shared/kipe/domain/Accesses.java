@@ -1,5 +1,7 @@
 package com.mycompany.myapp.shared.kipe.domain;
 
+import com.mycompany.myapp.shared.error.domain.Assert;
+import com.mycompany.myapp.shared.kipe.domain.RolesAccesses.RolesAccessesBuilder;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -10,8 +12,6 @@ import java.util.function.BinaryOperator;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import com.mycompany.myapp.shared.error.domain.Assert;
-import com.mycompany.myapp.shared.kipe.domain.RolesAccesses.RolesAccessesBuilder;
 
 public final class Accesses {
 

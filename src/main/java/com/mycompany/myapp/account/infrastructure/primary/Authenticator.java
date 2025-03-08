@@ -1,11 +1,11 @@
 package com.mycompany.myapp.account.infrastructure.primary;
 
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Service;
 import com.mycompany.myapp.account.application.AccountApplicationService;
 import com.mycompany.myapp.account.domain.Token;
 import com.mycompany.myapp.shared.authentication.application.AuthenticatedUser;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Service;
 
 @Service
 class Authenticator {

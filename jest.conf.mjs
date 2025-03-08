@@ -1,8 +1,8 @@
-import { pathsToModuleNameMapper } from 'ts-jest';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
+import { pathsToModuleNameMapper } from 'ts-jest';
 
-const tsconfig = JSON.parse(readFileSync(resolve('./tsconfig.json'), 'utf-8'))
+const tsconfig = JSON.parse(readFileSync(resolve('./tsconfig.json'), 'utf-8'));
 
 export default {
   transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$|dayjs/esm|keycloak-js)'],

@@ -1,9 +1,9 @@
 package com.mycompany.myapp.shared.authentication.domain;
 
-import java.util.Set;
-import java.util.stream.Stream;
 import com.mycompany.myapp.shared.collection.domain.AISampleAppCollections;
 import com.mycompany.myapp.shared.error.domain.Assert;
+import java.util.Set;
+import java.util.stream.Stream;
 
 public record Roles(Set<Role> roles) {
   public static final Roles EMPTY = new Roles(null);

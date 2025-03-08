@@ -1,5 +1,10 @@
 package com.mycompany.myapp.sample.infrastructure.secondary;
 
+import com.mycompany.myapp.sample.domain.BeerId;
+import com.mycompany.myapp.sample.domain.beer.Beer;
+import com.mycompany.myapp.sample.domain.beer.BeerSellingState;
+import com.mycompany.myapp.shared.error.domain.Assert;
+import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -10,11 +15,6 @@ import java.math.BigDecimal;
 import java.util.UUID;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-import com.mycompany.myapp.sample.domain.BeerId;
-import com.mycompany.myapp.sample.domain.beer.Beer;
-import com.mycompany.myapp.sample.domain.beer.BeerSellingState;
-import com.mycompany.myapp.shared.error.domain.Assert;
-import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 
 @Entity
 @Table(name = "beers")

@@ -2,8 +2,8 @@ package com.mycompany.myapp.shared.error.domain;
 
 import static org.assertj.core.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
 import com.mycompany.myapp.UnitTest;
+import org.junit.jupiter.api.Test;
 
 @UnitTest
 class NumberValueTooHighExceptionTest {

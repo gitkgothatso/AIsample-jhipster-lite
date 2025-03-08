@@ -1,8 +1,8 @@
 package com.mycompany.myapp.shared.authentication.domain;
 
+import com.mycompany.myapp.shared.error.domain.Assert;
 import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 public record Username(String username) {
   public Username {

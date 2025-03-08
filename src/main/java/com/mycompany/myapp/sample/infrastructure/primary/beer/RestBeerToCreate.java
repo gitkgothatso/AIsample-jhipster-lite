@@ -1,13 +1,13 @@
 package com.mycompany.myapp.sample.infrastructure.primary.beer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.mycompany.myapp.sample.domain.Amount;
+import com.mycompany.myapp.sample.domain.beer.BeerName;
+import com.mycompany.myapp.sample.domain.beer.BeerToCreate;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema.RequiredMode;
 import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
-import com.mycompany.myapp.sample.domain.Amount;
-import com.mycompany.myapp.sample.domain.beer.BeerName;
-import com.mycompany.myapp.sample.domain.beer.BeerToCreate;
 
 @Schema(name = "beerToCreate", description = "A beer to create")
 class RestBeerToCreate {

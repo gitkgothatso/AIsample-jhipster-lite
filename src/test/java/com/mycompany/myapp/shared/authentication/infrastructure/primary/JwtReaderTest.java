@@ -3,6 +3,10 @@ package com.mycompany.myapp.shared.authentication.infrastructure.primary;
 import static org.assertj.core.api.Assertions.*;
 
 import ch.qos.logback.classic.Level;
+import com.mycompany.myapp.Logs;
+import com.mycompany.myapp.LogsSpy;
+import com.mycompany.myapp.LogsSpyExtension;
+import com.mycompany.myapp.UnitTest;
 import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -15,10 +19,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
-import com.mycompany.myapp.Logs;
-import com.mycompany.myapp.LogsSpy;
-import com.mycompany.myapp.LogsSpyExtension;
-import com.mycompany.myapp.UnitTest;
 
 @UnitTest
 @ExtendWith({ LogsSpyExtension.class, MockitoExtension.class })

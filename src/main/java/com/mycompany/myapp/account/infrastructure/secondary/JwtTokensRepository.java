@@ -1,5 +1,10 @@
 package com.mycompany.myapp.account.infrastructure.secondary;
 
+import com.mycompany.myapp.account.domain.AuthenticationQuery;
+import com.mycompany.myapp.account.domain.Token;
+import com.mycompany.myapp.account.domain.TokensRepository;
+import com.mycompany.myapp.shared.authentication.domain.Role;
+import com.mycompany.myapp.shared.error.domain.Assert;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import java.nio.charset.StandardCharsets;
@@ -8,11 +13,6 @@ import java.util.Date;
 import java.util.stream.Collectors;
 import javax.crypto.SecretKey;
 import org.springframework.stereotype.Repository;
-import com.mycompany.myapp.account.domain.AuthenticationQuery;
-import com.mycompany.myapp.account.domain.Token;
-import com.mycompany.myapp.account.domain.TokensRepository;
-import com.mycompany.myapp.shared.authentication.domain.Role;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 @Repository
 class JwtTokensRepository implements TokensRepository {

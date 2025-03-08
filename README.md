@@ -39,7 +39,6 @@ npm install
 docker compose -f src/main/docker/postgresql.yml up -d
 ```
 
-
 <!-- jhipster-needle-startupCommand -->
 
 ## Documentation

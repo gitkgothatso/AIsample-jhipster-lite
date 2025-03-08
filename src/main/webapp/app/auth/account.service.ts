@@ -54,4 +54,11 @@ export class AccountService {
   private fetch(): Observable<Account> {
     return this.http.get<Account>('api/account');
   }
+
+  activate(key: string): Observable<string> {
+    return this.http.get('/api/activate', {
+      params: { key },
+      responseType: 'text',
+    });
+  }
 }

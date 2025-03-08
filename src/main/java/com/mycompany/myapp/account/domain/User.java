@@ -1,6 +1,5 @@
 package com.mycompany.myapp.account.domain;
 
-import java.time.Instant;
 import lombok.*;
 
 @Getter

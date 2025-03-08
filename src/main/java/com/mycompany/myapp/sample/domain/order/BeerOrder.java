@@ -1,5 +1,7 @@
 package com.mycompany.myapp.sample.domain.order;
 
+import com.mycompany.myapp.sample.domain.Amount;
+import com.mycompany.myapp.shared.error.domain.Assert;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -7,8 +9,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.function.BiFunction;
 import java.util.function.Function;
-import com.mycompany.myapp.sample.domain.Amount;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 public final class BeerOrder {
 

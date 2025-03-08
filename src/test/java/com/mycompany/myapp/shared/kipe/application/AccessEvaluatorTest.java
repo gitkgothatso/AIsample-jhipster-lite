@@ -3,12 +3,6 @@ package com.mycompany.myapp.shared.kipe.application;
 import static org.assertj.core.api.Assertions.*;
 
 import ch.qos.logback.classic.Level;
-import java.util.List;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.security.core.Authentication;
 import com.mycompany.myapp.Logs;
 import com.mycompany.myapp.LogsSpy;
 import com.mycompany.myapp.LogsSpyExtension;
@@ -16,6 +10,12 @@ import com.mycompany.myapp.UnitTest;
 import com.mycompany.myapp.shared.error.domain.MissingMandatoryValueException;
 import com.mycompany.myapp.shared.kipe.domain.KipeDummy;
 import com.mycompany.myapp.shared.kipe.domain.KipeDummyChild;
+import java.util.List;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.core.Authentication;
 
 @UnitTest
 @ExtendWith({ MockitoExtension.class, LogsSpyExtension.class })

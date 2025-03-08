@@ -1,8 +1,5 @@
 package com.mycompany.myapp.sample.application;
 
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.stereotype.Service;
 import com.mycompany.myapp.sample.domain.BeerId;
 import com.mycompany.myapp.sample.domain.beer.Beer;
 import com.mycompany.myapp.sample.domain.beer.BeerToCreate;
@@ -10,6 +7,9 @@ import com.mycompany.myapp.sample.domain.beer.Beers;
 import com.mycompany.myapp.sample.domain.beer.BeersCreator;
 import com.mycompany.myapp.sample.domain.beer.BeersRemover;
 import com.mycompany.myapp.sample.domain.beer.BeersRepository;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class BeersApplicationService {

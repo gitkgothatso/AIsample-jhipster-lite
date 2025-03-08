@@ -1,9 +1,9 @@
 package com.mycompany.myapp.sample.domain.beer;
 
+import com.mycompany.myapp.shared.error.domain.Assert;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.stream.Stream;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 public record Beers(Collection<Beer> beers) {
   private static final Comparator<Beer> BEER_NAME_COMPARATOR = Comparator.comparing(beer -> beer.name().get());

@@ -1,9 +1,9 @@
 package com.mycompany.myapp.shared.kipe.application;
 
+import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 
 @Component
 class ObjectAccessChecker implements AccessChecker<Object> {

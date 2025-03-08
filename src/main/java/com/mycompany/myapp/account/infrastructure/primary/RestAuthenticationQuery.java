@@ -2,15 +2,15 @@ package com.mycompany.myapp.account.infrastructure.primary;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import com.mycompany.myapp.account.domain.AuthenticationQuery;
+import com.mycompany.myapp.account.infrastructure.primary.RestAuthenticationQuery.RestAuthenticationQueryBuilder;
+import com.mycompany.myapp.shared.authentication.domain.Roles;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema.RequiredMode;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import com.mycompany.myapp.account.domain.AuthenticationQuery;
-import com.mycompany.myapp.account.infrastructure.primary.RestAuthenticationQuery.RestAuthenticationQueryBuilder;
-import com.mycompany.myapp.shared.authentication.domain.Roles;
 
 @JsonDeserialize(builder = RestAuthenticationQueryBuilder.class)
 @Schema(name = "AuthenticationQuery", description = "Query to authenticate a user")

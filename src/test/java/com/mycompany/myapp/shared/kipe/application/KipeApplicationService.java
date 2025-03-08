@@ -1,8 +1,8 @@
 package com.mycompany.myapp.shared.kipe.application;
 
+import com.mycompany.myapp.shared.kipe.domain.KipeDummy;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
-import com.mycompany.myapp.shared.kipe.domain.KipeDummy;
 
 @Service
 public class KipeApplicationService {

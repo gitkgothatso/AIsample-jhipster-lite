@@ -1,5 +1,6 @@
 package com.mycompany.myapp.shared.authentication.infrastructure.primary;
 
+import com.mycompany.myapp.shared.error.domain.Assert;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
@@ -13,7 +14,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 class JWTFilter extends GenericFilterBean {
 

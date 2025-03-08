@@ -1,5 +1,9 @@
 package com.mycompany.myapp.shared.authentication.application;
 
+import com.mycompany.myapp.shared.authentication.domain.Role;
+import com.mycompany.myapp.shared.authentication.domain.Roles;
+import com.mycompany.myapp.shared.authentication.domain.Username;
+import com.mycompany.myapp.shared.error.domain.Assert;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -7,10 +11,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import com.mycompany.myapp.shared.authentication.domain.Role;
-import com.mycompany.myapp.shared.authentication.domain.Roles;
-import com.mycompany.myapp.shared.authentication.domain.Username;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 /**
  * This is a utility class to get authenticated user information

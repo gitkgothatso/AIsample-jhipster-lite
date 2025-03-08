@@ -2,12 +2,12 @@ package com.mycompany.myapp.sample.infrastructure.primary.beer;
 
 import static com.mycompany.myapp.cucumber.rest.CucumberRestAssertions.*;
 
+import com.mycompany.myapp.cucumber.rest.CucumberRestTemplate;
+import com.mycompany.myapp.cucumber.rest.CucumberRestTestContext;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import java.util.List;
 import java.util.Map;
-import com.mycompany.myapp.cucumber.rest.CucumberRestTemplate;
-import com.mycompany.myapp.cucumber.rest.CucumberRestTestContext;
 
 public class BeersSteps {
 

@@ -1,14 +1,14 @@
 package com.mycompany.myapp.shared.kipe.domain;
 
-import static org.assertj.core.api.Assertions.*;
 import static com.mycompany.myapp.shared.kipe.domain.RolesAccessesFixture.*;
+import static org.assertj.core.api.Assertions.*;
 
-import java.util.Set;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
 import com.mycompany.myapp.UnitTest;
 import com.mycompany.myapp.shared.authentication.domain.Role;
 import com.mycompany.myapp.shared.authentication.domain.Roles;
+import java.util.Set;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
 
 @UnitTest
 class RolesAccessesTest {

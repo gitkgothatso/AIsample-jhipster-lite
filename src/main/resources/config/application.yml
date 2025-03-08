@@ -49,6 +49,16 @@ spring:
       name: admin
       password: $2a$12$cRKS9ZURbdJIaRsKDTDUmOrH4.B.2rokv8rrkrQXr2IR2Hkna484O
       roles: ADMIN
+
+  mail:
+    host: localhost
+    port: 25
+    username:
+    password:
+    properties:
+      mail.smtp.auth: false
+      mail.smtp.starttls.enable: false
+
 application:
   logging:
     logstash:

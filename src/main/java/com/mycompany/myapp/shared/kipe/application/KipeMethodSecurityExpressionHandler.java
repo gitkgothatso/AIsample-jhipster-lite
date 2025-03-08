@@ -23,12 +23,7 @@ class KipeMethodSecurityExpressionHandler extends DefaultMethodSecurityExpressio
   public EvaluationContext createEvaluationContext(Supplier<Authentication> authentication, MethodInvocation mi) {
     MethodSecurityExpressionOperations root = buildExpressionRoot(authentication, mi);
 
-    var ctx = new MethodBasedEvaluationContext(
-      root,
-      getSpecificMethod(mi),
-      mi.getArguments(),
-      getParameterNameDiscoverer()
-    );
+    var ctx = new MethodBasedEvaluationContext(root, getSpecificMethod(mi), mi.getArguments(), getParameterNameDiscoverer());
 
     ctx.setBeanResolver(getBeanResolver());
 

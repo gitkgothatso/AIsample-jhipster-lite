@@ -1,5 +1,6 @@
 package com.mycompany.myapp.shared.authentication.infrastructure.primary;
 
+import com.mycompany.myapp.shared.error.domain.Assert;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.JwtParser;
@@ -13,7 +14,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 class JwtReader implements AuthenticationTokenReader {
 

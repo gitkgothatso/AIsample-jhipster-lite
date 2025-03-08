@@ -1,10 +1,10 @@
 package com.mycompany.myapp.shared.authentication.domain;
 
+import com.mycompany.myapp.shared.error.domain.Assert;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import com.mycompany.myapp.shared.error.domain.Assert;
 
 public enum Role {
   ADMIN,

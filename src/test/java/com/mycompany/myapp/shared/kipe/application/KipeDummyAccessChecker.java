@@ -1,7 +1,7 @@
 package com.mycompany.myapp.shared.kipe.application;
 
-import org.springframework.stereotype.Component;
 import com.mycompany.myapp.shared.kipe.domain.KipeDummy;
+import org.springframework.stereotype.Component;
 
 @Component
 class KipeDummyAccessChecker implements AccessChecker<KipeDummy> {

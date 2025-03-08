@@ -1,8 +1,8 @@
 import eslint from '@eslint/js';
 import angular from 'angular-eslint';
+import cypress from 'eslint-plugin-cypress/flat';
 import globals from 'globals';
 import typescript from 'typescript-eslint';
-import cypress from 'eslint-plugin-cypress/flat';
 
 export default typescript.config(
   {

@@ -1,13 +1,13 @@
 package com.mycompany.myapp.sample.domain.order;
 
-import static org.assertj.core.api.Assertions.*;
 import static com.mycompany.myapp.sample.domain.order.BeerOrderFixture.*;
+import static org.assertj.core.api.Assertions.*;
 
-import java.math.BigDecimal;
-import org.junit.jupiter.api.Test;
 import com.mycompany.myapp.UnitTest;
 import com.mycompany.myapp.sample.domain.Amount;
 import com.mycompany.myapp.shared.error.domain.MissingMandatoryValueException;
+import java.math.BigDecimal;
+import org.junit.jupiter.api.Test;
 
 @UnitTest
 class BeerOrderTest {
