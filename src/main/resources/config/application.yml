@@ -53,6 +53,8 @@ application:
         port: 5000
         ring-buffer-size: 8192
         shutdown_grace_period: PT1M
+  security:
+    jwt-base64-secret: ZTg3MzdhMTEyMWM3NTI1OTJkYmUzYmZjZjc2YzNlYjc2ZTNmMjgyM2YzNGEzMWZmOTQ5NmZkZDg2NDk1MWUzZg==
 management:
   endpoint:
     health:
