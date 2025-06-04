@@ -1,0 +1,15 @@
+{
+  "actions" : [ {
+    "module" : "init",
+    "date" : "2025-06-04T07:26:48.020871109Z",
+    "properties" : {
+      "baseName" : "AISampleApp",
+      "packageName" : "com.mycompany.myapp",
+      "projectName" : "JHipster Sample Application",
+      "serverPort" : 8080,
+      "endOfLine" : "lf",
+      "indentSize" : 2,
+      "springConfigurationFormat" : "yaml"
+    }
+  } ]
+}
