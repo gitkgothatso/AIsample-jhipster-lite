@@ -10,3 +10,5 @@ spring:
     password: ''
     url: jdbc:tc:postgresql:17.5:///AISampleApp?TC_TMPFS=/testtmpfs:rw
     username: AISampleApp
+server:
+  port: 0
