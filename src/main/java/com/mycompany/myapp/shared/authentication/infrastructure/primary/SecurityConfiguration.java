@@ -2,6 +2,8 @@ package com.mycompany.myapp.shared.authentication.infrastructure.primary;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.*;
 
+import com.mycompany.myapp.account.domain.UserRepository;
+import com.mycompany.myapp.shared.authentication.domain.Role;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import java.nio.charset.StandardCharsets;
@@ -18,6 +20,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer.FrameOptionsConfig;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -26,7 +31,6 @@ import org.springframework.security.web.header.writers.ReferrerPolicyHeaderWrite
 import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
-import com.mycompany.myapp.shared.authentication.domain.Role;
 
 @Configuration
 @EnableWebSecurity
@@ -37,16 +41,34 @@ class SecurityConfiguration {
   private final JwtAuthenticationProperties properties;
   private final CorsFilter corsFilter;
   private final HandlerMappingIntrospector introspector;
+  private final UserRepository userRepository;
 
-  public SecurityConfiguration(JwtAuthenticationProperties properties, CorsFilter corsFilter, HandlerMappingIntrospector introspector) {
+  public SecurityConfiguration(
+    JwtAuthenticationProperties properties,
+    CorsFilter corsFilter,
+    HandlerMappingIntrospector introspector,
+    UserRepository userRepository
+  ) {
     this.properties = properties;
     this.corsFilter = corsFilter;
     this.introspector = introspector;
+    this.userRepository = userRepository;
   }
 
   @Bean
   public PasswordEncoder passwordEncoder() {
     return new BCryptPasswordEncoder();
+  }
+
+  @Bean
+  public UserDetailsService userDetailsService() {
+    System.out.println("check our user details....");
+    return new UserDetailsService() {
+      @Override
+      public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return userRepository.findUserByEmail(username);
+      }
+    };
   }
 
   @Bean
@@ -67,6 +89,7 @@ class SecurityConfiguration {
       .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
       .authorizeHttpRequests(authz -> authz
         .requestMatchers(antMatcher(HttpMethod.OPTIONS, "/**")).permitAll()
+        .requestMatchers(antMatcher("/**")).permitAll()
         .requestMatchers(antMatcher("/app/**")).permitAll()
         .requestMatchers(antMatcher("/i18n/**")).permitAll()
         .requestMatchers(antMatcher("/content/**")).permitAll()
